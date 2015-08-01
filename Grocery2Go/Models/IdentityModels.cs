@@ -24,6 +24,11 @@ namespace Grocery2Go.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItems> OrderItems { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
 
         public static ApplicationDbContext Create()
         {
