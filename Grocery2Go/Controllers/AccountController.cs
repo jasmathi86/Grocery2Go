@@ -151,7 +151,15 @@ namespace Grocery2Go.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                ShoppingCart uSC1 = new ShoppingCart();
+               //create a ShoppingCart and bind to registering User?
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    ShoppingCart = uSC1
+                
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

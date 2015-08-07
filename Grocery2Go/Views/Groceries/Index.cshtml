@@ -1,0 +1,30 @@
+﻿@*@model Grocery2Go.Models.Views.ProductsViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>CornerStore</h2>
+<table class="table table-striped" >
+    
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Buy</th>      
+    </tr>
+   @foreach (var item in Model.Products)
+   {
+    <tr>
+        <td>@item.Name</td>
+        <td>@item.Price</td>
+        <td>@Html.ActionLink("Add To Cart", "AddToCart")</td>
+    </tr>
+   }
+    
+
+</table>
+<ul>
+   
+
+   
+
+</ul>*@

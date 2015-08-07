@@ -11,9 +11,7 @@ namespace Grocery2Go.Models
         public int ShoppingCartId { get; set; }
        
 
-        public string UserId { get; set; }
-        [ForeignKey("UserId")]
-        public virtual ApplicationUser User { get; set; }
+        
 
 
         public ICollection<ShoppingCartItem> ShoppingCartList { get; set; }

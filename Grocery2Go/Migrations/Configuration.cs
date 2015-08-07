@@ -46,10 +46,14 @@ namespace Grocery2Go.Migrations
             {
                 jason = new ApplicationUser
                 {
+                   
                     Email = "jasmathi86@gmail.com",
-                    UserName = "jasmathi86@gmail.com"
-
+                    UserName = "jasmathi86@gmail.com",
+                    ShoppingCart = new ShoppingCart()
                 };
+
+                
+                
                 userManager.Create(jason, "password");
                 userManager.AddToRole(jason.Id, "Vendor");
 

@@ -19,6 +19,7 @@ namespace Grocery2Go.Controllers
         {
             var shoppingCartItems = db.ShoppingCartItems.Include(s => s.Product).Include(s => s.ShoppingCart);
             return View(shoppingCartItems.ToList());
+
         }
 
         // GET: ShoppingCartItems/Details/5
