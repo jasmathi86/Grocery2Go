@@ -20,6 +20,22 @@
         </tr>
     }
 
+    <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var item in Model.ShoppingCartList)
+    {
+        <tr>
+            <td>@item.Product.Name</td>
+            <td>@item.Quantity</td>
+            <td>@Html.ActionLink("Delete", "DeleteFromCart", new { shoppingCartItemId = item.ShoppingCartItemId})</td>
+        </tr>
+    }
+
+
+
 
 </table>
 <ul></ul>

@@ -10,5 +10,6 @@ namespace Grocery2Go.Models.Views
         public IList<Product> Products { get; set; }
 
 
+        public ICollection<ShoppingCartItem> ShoppingCartList { get; set; }
     }
 }

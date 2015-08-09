@@ -171,13 +171,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201508010033500_init1.cs" />
-    <Compile Include="Migrations\201508010033500_init1.Designer.cs">
-      <DependentUpon>201508010033500_init1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201508061705294_fixedrelationship.cs" />
-    <Compile Include="Migrations\201508061705294_fixedrelationship.Designer.cs">
-      <DependentUpon>201508061705294_fixedrelationship.cs</DependentUpon>
+    <Compile Include="Migrations\201508082352346_init1.cs" />
+    <Compile Include="Migrations\201508082352346_init1.Designer.cs">
+      <DependentUpon>201508082352346_init1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -268,11 +264,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201508010033500_init1.resx">
-      <DependentUpon>201508010033500_init1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201508061705294_fixedrelationship.resx">
-      <DependentUpon>201508061705294_fixedrelationship.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201508082352346_init1.resx">
+      <DependentUpon>201508082352346_init1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

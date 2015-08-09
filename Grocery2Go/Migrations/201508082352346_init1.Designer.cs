@@ -13,7 +13,7 @@ namespace Grocery2Go.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201508010033500_init1"; }
+            get { return "201508082352346_init1"; }
         }
         
         string IMigrationMetadata.Source

@@ -18,7 +18,10 @@ namespace Grocery2Go.Controllers
         {
             var vm = new ProductsViewModel
             {
-                Products = _db.Products.ToList()
+                Products = _db.Products.ToList(),
+
+                ShoppingCartList = _db.Users.Where(m => m.UserName == User.Identity.Name).Include(m => m.ShoppingCart.ShoppingCartList).FirstOrDefault().ShoppingCart.ShoppingCartList
+
             };
 
             return View(vm);
@@ -76,21 +79,21 @@ namespace Grocery2Go.Controllers
             return View();
         }
 
-        // POST: Groceries/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
+        //// POST: Groceries/Create
+        //[HttpPost]
+        //public ActionResult Create(FormCollection collection)
+        //{
+        //    try
+        //    {
+        //        // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
 
         // GET: Groceries/Edit/5
         public ActionResult Edit(int id)
@@ -115,25 +118,35 @@ namespace Grocery2Go.Controllers
         }
 
         // GET: Groceries/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult DeleteFromCart(int shoppingCartItemid)
         {
-            return View();
+            var user = _db.Users.Where(m => m.UserName == User.Identity.Name).Include(m => m.ShoppingCart.ShoppingCartList).FirstOrDefault();
+            var sCl = user.ShoppingCart.ShoppingCartList;
+            var sC2 = sCl.Where(m => m.ShoppingCartItemId == shoppingCartItemid).FirstOrDefault();
+            sCl.Remove(sC2);
+            var dBI = _db.ShoppingCartItems.Where(m => m.ShoppingCartItemId == shoppingCartItemid).FirstOrDefault();
+            _db.ShoppingCartItems.Remove(dBI);
+
+            _db.SaveChanges();
+
+            return Redirect("Index");
+
         }
 
-        // POST: Groceries/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
+        //// POST: Groceries/Delete/5
+        //[HttpPost]
+        //public ActionResult DeleteFromCart(int shoppingCartItemid, FormCollection collection)
+        //{
+        //    try
+        //    {
+        //        // TODO: Add delete logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
     }
 }

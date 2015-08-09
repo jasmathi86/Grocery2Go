@@ -108,8 +108,7 @@ C:\Users\Jason\Documents\Visual Studio 2013\Projects\Grocery2Go (2)\Grocery2Go\b
 C:\Users\Jason\Documents\Visual Studio 2013\Projects\Grocery2Go (2)\Grocery2Go\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Jason\Documents\Visual Studio 2013\Projects\Grocery2Go (2)\Grocery2Go\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Jason\Documents\Visual Studio 2013\Projects\Grocery2Go (2)\Grocery2Go\obj\Debug\Grocery2Go.csprojResolveAssemblyReference.cache
-C:\Users\Jason\Documents\Visual Studio 2013\Projects\Grocery2Go (2)\Grocery2Go\obj\Debug\Grocery2Go.Migrations.init1.resources
-C:\Users\Jason\Documents\Visual Studio 2013\Projects\Grocery2Go (2)\Grocery2Go\obj\Debug\Grocery2Go.csproj.GenerateResource.Cache
 C:\Users\Jason\Documents\Visual Studio 2013\Projects\Grocery2Go (2)\Grocery2Go\obj\Debug\Grocery2Go.dll
 C:\Users\Jason\Documents\Visual Studio 2013\Projects\Grocery2Go (2)\Grocery2Go\obj\Debug\Grocery2Go.pdb
-C:\Users\Jason\Documents\Visual Studio 2013\Projects\Grocery2Go (2)\Grocery2Go\obj\Debug\Grocery2Go.Migrations.fixedrelationship.resources
+C:\Users\Jason\Documents\Visual Studio 2013\Projects\Grocery2Go (2)\Grocery2Go\obj\Debug\Grocery2Go.Migrations.init1.resources
+C:\Users\Jason\Documents\Visual Studio 2013\Projects\Grocery2Go (2)\Grocery2Go\obj\Debug\Grocery2Go.csproj.GenerateResource.Cache
